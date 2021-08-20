@@ -31,7 +31,7 @@ namespace Exercises.ShortestPath
 
             RemoveInvalidPaths(successfulPaths);
 
-            return FindShortestPath(successfulPaths);
+            return FindShortestPathLength(successfulPaths);
 
         }
 
@@ -40,7 +40,7 @@ namespace Exercises.ShortestPath
             paths.RemoveAll(p => p == null);
         }
 
-        private int FindShortestPath(List<List<Position>> paths)
+        private int FindShortestPathLength(List<List<Position>> paths)
         {
 
             int shortestPath = paths?.FirstOrDefault()?.Count ?? 0;
@@ -74,8 +74,9 @@ namespace Exercises.ShortestPath
             }
             else
             {
-                foreach (Position nextMove in possibleMoves)
+                foreach (var nextMove in possibleMoves)
                 {
+                    // TODO: Fix issue with only one path being searched down if it ends prematurely 
                     return Move(map, nextMove, new List<Position>(pathHistory), currentStep + 1);
                 }
             }

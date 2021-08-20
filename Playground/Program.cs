@@ -26,13 +26,15 @@ namespace Playground
             */
 
             Console.WriteLine(shortestPath.Find(new List<List<int>> {
-            new List<int> {2, 0, 1, 1, 1},
-            new List<int> {1, 1, 1, 0, 1},
-            new List<int> {1, 0, 0, 0, 1},
-            new List<int> {1, 0, 1, 0, 1},
-            new List<int> {1, 1, 1, 0, 3}
+            new List<int> {2, 0, 1, 1, 1, 1, 1, 1},
+            new List<int> {1, 0, 1, 0, 1, 0, 1, 1},
+            new List<int> {1, 1, 1, 0, 1, 0, 0, 0},
+            new List<int> {0, 0, 0, 0, 1, 0, 1, 0},
+            new List<int> {1, 1, 1, 1, 1, 0, 1, 0},
+            new List<int> {1, 0, 0, 0, 0, 1, 1, 1},
+            new List<int> {1, 1, 0, 1, 0, 1, 0, 1},
+            new List<int> {0, 1, 1, 1, 1, 1, 0, 3}
             }, 0, 0));
-
 
             Console.WriteLine("Ending your code");
         }
