@@ -1,0 +1,12 @@
+C:\Users\iwill\source\repos\Playground\Playground\bin\Debug\netcoreapp3.1\Playground.exe
+C:\Users\iwill\source\repos\Playground\Playground\bin\Debug\netcoreapp3.1\Playground.deps.json
+C:\Users\iwill\source\repos\Playground\Playground\bin\Debug\netcoreapp3.1\Playground.runtimeconfig.json
+C:\Users\iwill\source\repos\Playground\Playground\bin\Debug\netcoreapp3.1\Playground.runtimeconfig.dev.json
+C:\Users\iwill\source\repos\Playground\Playground\bin\Debug\netcoreapp3.1\Playground.dll
+C:\Users\iwill\source\repos\Playground\Playground\bin\Debug\netcoreapp3.1\Playground.pdb
+C:\Users\iwill\source\repos\Playground\Playground\obj\Debug\netcoreapp3.1\Playground.csproj.CoreCompileInputs.cache
+C:\Users\iwill\source\repos\Playground\Playground\obj\Debug\netcoreapp3.1\Playground.AssemblyInfoInputs.cache
+C:\Users\iwill\source\repos\Playground\Playground\obj\Debug\netcoreapp3.1\Playground.AssemblyInfo.cs
+C:\Users\iwill\source\repos\Playground\Playground\obj\Debug\netcoreapp3.1\Playground.dll
+C:\Users\iwill\source\repos\Playground\Playground\obj\Debug\netcoreapp3.1\Playground.pdb
+C:\Users\iwill\source\repos\Playground\Playground\obj\Debug\netcoreapp3.1\Playground.genruntimeconfig.cache
