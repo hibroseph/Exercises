@@ -85,7 +85,7 @@ namespace Exercises.ShortestPath.Tests
             new List<int> {1, 1, 1, 1, 3, 0}
             };
 
-            Assert.AreEqual(10, shortestPath.Find(map, 2, 0));
+            Assert.AreEqual(6, shortestPath.Find(map, 2, 0));
         }
 
         [Test]
@@ -157,5 +157,27 @@ namespace Exercises.ShortestPath.Tests
 
             Assert.AreEqual(14, shortestPath.Find(map, 0, 0));
         }
+
+        [Test]
+        public void TestMap10x10_ComplexMultiplePaths()
+        {
+            Exercises.ShortestPath.ShortestPath shortestPath = new Exercises.ShortestPath.ShortestPath();
+
+            List<List<int>> map = new List<List<int>> {
+            new List<int> {2, 1, 1, 1, 0, 1, 1, 1, 1, 1},
+            new List<int> {0, 0, 0, 1, 0, 1, 0, 1, 0, 1},
+            new List<int> {0, 1, 0, 1, 0, 1, 0, 1, 0, 1},
+            new List<int> {0, 1, 1, 1, 0, 1, 0, 1, 1, 1},
+            new List<int> {0, 1, 0, 0, 0, 1, 0, 1, 0, 1},
+            new List<int> {1, 1, 0, 1, 1, 1, 0, 1, 0, 0},
+            new List<int> {1, 0, 1, 1, 0, 0, 0, 1, 0, 1},
+            new List<int> {1, 1, 1, 0, 1, 1, 1, 1, 1, 1},
+            new List<int> {0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+            new List<int> {1, 1, 1, 1, 1, 1, 1, 1, 1, 3},
+            };
+
+            Assert.AreEqual(44, shortestPath.Find(map, 0, 0));
+        }
+
     }
 }

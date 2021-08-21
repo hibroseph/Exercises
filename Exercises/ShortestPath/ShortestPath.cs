@@ -15,7 +15,6 @@ namespace Exercises.ShortestPath
 
             Position startPosition = new Position { X = startPositionX, Y = startPositionY };
 
-
             return FindShortestPath(map, startPosition);
 
         }
@@ -74,14 +73,21 @@ namespace Exercises.ShortestPath
             }
             else
             {
+                List<List<Position>> paths = new List<List<Position>>();
+
                 foreach (var nextMove in possibleMoves)
                 {
-                    // TODO: Fix issue with only one path being searched down if it ends prematurely 
-                    return Move(map, nextMove, new List<Position>(pathHistory), currentStep + 1);
+                    paths.Add(Move(map, nextMove, new List<Position>(pathHistory), currentStep + 1));
                 }
-            }
 
-            return null;
+                return FindShortestPath(paths);
+            }
+        }
+
+        private List<Position> FindShortestPath(List<List<Position>> paths)
+        {
+            paths?.RemoveAll(p => p.Count == 0);
+            return paths?.OrderBy(p => p.Count).FirstOrDefault() ?? new List<Position>();
         }
 
         public List<Position> FindPossibleMoves(List<List<int>> map, Position currentPosition, List<Position> historicalPositions)
@@ -91,7 +97,7 @@ namespace Exercises.ShortestPath
             // RIGHT
             if (currentPosition.X + 1 <= map[currentPosition.Y].Count - 1)
             {
-                // TODO: Figure out why this statement cannot be combined in the statement above.
+                // For some reason I was getting an array out of bound when the conditional below was combined with the one above. With my knowledge of short-circuiting, that should not happen
                 if (map[currentPosition.Y][currentPosition.X + 1] == 1 || map[currentPosition.Y][currentPosition.X + 1] == 3)
                 {
                     possibleMoves.Add(new Position { X = currentPosition.X + 1, Y = currentPosition.Y });
